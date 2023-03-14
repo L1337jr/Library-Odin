@@ -39,6 +39,7 @@
   .delBTN {
     width: 70px !important;
     letter-spacing: 0 !important;
+    font-size: 9px !important;
   }
 }
 
@@ -163,7 +164,6 @@ tr {
 
 .statusBTN,
 .delBTN {
-  display: inline-block;
   height: 38px;
   width: 100px;
   color: white;
