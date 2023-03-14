@@ -6,16 +6,17 @@ const tbody = document.getElementById("list");
 const booksCollection = document.getElementById("booksCollection");
 const $status = document.querySelector("#status");
 
-function Book(name, author, status) {
+function Book(name, author, status, pages) {
   // the constructor...
   this.Name = name;
   this.Author = author;
   this.Status = status;
+  this.Pages = pages;
 }
 
-function addBookToLibrary(bookName, bookAuthor, status) {
+function addBookToLibrary(bookName, bookAuthor, status, pagesN) {
   // do stuff here
-  const newBook = new Book(bookName, bookAuthor, status);
+  const newBook = new Book(bookName, bookAuthor, status, pagesN);
   myLibrary.push(newBook);
   render();
 }
@@ -37,6 +38,11 @@ function render() {
     author.setAttribute("class", "author");
     author.textContent = myLibrary[i].Author;
     div.appendChild(author);
+
+    const pages = document.createElement("td");
+    pages.setAttribute("class", "pages");
+    pages.textContent = myLibrary[i].Pages;
+    div.appendChild(pages);
 
     const status = document.createElement("td");
     const statusbtn = document.createElement("button");
@@ -61,8 +67,14 @@ function check() {
   const bookName = document.getElementById("name");
   const bookAuthor = document.getElementById("author");
   const status = document.getElementById("read");
+  const pagesN = document.getElementById("numbers");
   if (bookName.value !== "" && bookAuthor.value !== "") {
-    addBookToLibrary(bookName.value, bookAuthor.value, status.value);
+    addBookToLibrary(
+      bookName.value,
+      bookAuthor.value,
+      status.value,
+      pagesN.value
+    );
   }
 }
 

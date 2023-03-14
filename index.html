@@ -39,6 +39,17 @@
             <option value="Not Read">Not Read</option>
           </select>
         </div>
+        <div>
+          <label for="numbers">Pages</label>
+          <input
+            type="number"
+            id="numbers"
+            name="numbers"
+            required
+            value="0"
+            pattern="[0-9]+"
+          />
+        </div>
         <div class="add">
           <button type="submit" class="btn" id="add">Add</button>
         </div>
@@ -49,6 +60,7 @@
             <tr>
               <th>Title</th>
               <th>Author</th>
+              <th>Pages</th>
               <th>Status</th>
               <th></th>
             </tr>

@@ -157,3 +157,17 @@ tr {
   border: 2px solid var(--redDelete);
   color: var(--redDelete);
 }
+
+#numbers {
+  width: 2rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-moz-number-spinners {
+  display: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
