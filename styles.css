@@ -125,6 +125,7 @@ table {
   font-size: large;
   margin-top: 2rem;
   word-wrap: break-word !important;
+  text-overflow: clip;
 }
 
 th,
@@ -132,6 +133,7 @@ td {
   padding: 10px 5px;
   text-align: left;
   border-bottom: 1px solid white;
+  max-width: 2rem;
 }
 
 tr {
