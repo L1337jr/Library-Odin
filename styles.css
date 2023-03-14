@@ -48,6 +48,7 @@ html {
   background-image: url("img/7082673_23964.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #010824;
 }
 
 body {
@@ -123,6 +124,7 @@ table {
   width: 63%;
   font-size: large;
   margin-top: 2rem;
+  word-wrap: break-word !important;
 }
 
 th,
