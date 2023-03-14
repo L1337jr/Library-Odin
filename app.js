@@ -3,7 +3,6 @@ let myLibrary = [];
 const add = document.querySelector(".btn");
 const form = document.querySelector("form");
 const tbody = document.getElementById("list");
-const booksCollection = document.getElementById("booksCollection");
 const $status = document.querySelector("#status");
 
 function Book(name, author, status, pages) {
@@ -67,8 +66,8 @@ function check() {
   const bookName = document.getElementById("name");
   const bookAuthor = document.getElementById("author");
   const status = document.getElementById("read");
-  const pagesN = document.getElementById("numbers");
-  if (bookName.value !== "" && bookAuthor.value !== "") {
+  const pagesN = document.getElementById("number");
+  if (bookName.value !== "" && bookAuthor.value !== "" && pagesN.value >= "0") {
     addBookToLibrary(
       bookName.value,
       bookAuthor.value,

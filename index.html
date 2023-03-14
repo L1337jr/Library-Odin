@@ -41,33 +41,24 @@
         </div>
         <div>
           <label for="numbers">Pages</label>
-          <input
-            type="number"
-            id="numbers"
-            name="numbers"
-            required
-            value="0"
-            pattern="[0-9]+"
-          />
+          <input type="number" id="number" name="number" required />
         </div>
         <div class="add">
           <button type="submit" class="btn" id="add">Add</button>
         </div>
       </form>
-      <div id="booksCollection">
-        <table>
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Author</th>
-              <th>Pages</th>
-              <th>Status</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody id="list"></tbody>
-        </table>
-      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Pages</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="list"></tbody>
+      </table>
     </div>
   </body>
   <script src="app.js"></script>
