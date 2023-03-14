@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300&display=swap");
+
+:root {
+  --blue: #1e40af;
+  --backColor: #12192a;
+  --redDelete: #9f1239;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 4rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  background-image: url("img/7082673_23964.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn {
+  display: inline-block;
+  padding: 18px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--blue);
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: black;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  margin-right: 2rem;
+  height: 10px;
+  padding: 6px 10px;
+  background-color: var(--backColor);
+  border: 1px solid white;
+  border-radius: 4px;
+  box-shadow: none;
+  margin-right: 2rem;
+  color: white;
+  outline: none;
+}
+
+table {
+  border-collapse: collapse;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+#booksCollection {
+  width: 100vh;
+}
+
+table {
+  width: 100vh;
+  font-size: large;
+  margin-top: 2rem;
+}
+
+th,
+td {
+  padding: 10px 5px;
+  text-align: left;
+  border-bottom: 1px solid white;
+}
+
+tr {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#read {
+  height: 30px;
+  padding: 6px 10px;
+  background-color: var(--backColor);
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  box-shadow: none;
+  margin-right: 2rem;
+  color: white;
+}
+
+.status {
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.statusBTN,
+.delBTN {
+  display: inline-block;
+  height: 38px;
+  width: 100px;
+  color: white;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 2px solid #bbb;
+  cursor: pointer;
+}
+
+.statusBTN:hover {
+  border: 2px solid var(--blue);
+  color: var(--blue);
+}
+
+.delBTN:hover {
+  border: 2px solid var(--redDelete);
+  color: var(--redDelete);
+}
