@@ -67,7 +67,7 @@ function check() {
   const bookAuthor = document.getElementById("author");
   const status = document.getElementById("read");
   const pagesN = document.getElementById("number");
-  if (bookName.value !== "" && bookAuthor.value !== "" && pagesN.value >= "0") {
+  if (bookName.value !== "" && bookAuthor.value !== "" && pagesN.value > "0") {
     addBookToLibrary(
       bookName.value,
       bookAuthor.value,
