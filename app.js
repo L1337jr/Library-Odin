@@ -5,16 +5,16 @@ const form = document.querySelector("form");
 const tbody = document.getElementById("list");
 const $status = document.querySelector("#status");
 
-function Book(name, author, status, pages) {
-  // the constructor...
-  this.Name = name;
-  this.Author = author;
-  this.Status = status;
-  this.Pages = pages;
+class Book {
+  constructor(name, author, status, pages) {
+    this.Name = name;
+    this.Author = author;
+    this.Status = status;
+    this.Pages = pages;
+  }
 }
 
 function addBookToLibrary(bookName, bookAuthor, status, pagesN) {
-  // do stuff here
   const newBook = new Book(bookName, bookAuthor, status, pagesN);
   myLibrary.push(newBook);
   render();
