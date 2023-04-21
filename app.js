@@ -18,10 +18,10 @@ function addBookToLibrary(bookName, bookAuthor, status, pagesN) {
   const newBook = new Book(bookName, bookAuthor, status, pagesN);
   myLibrary.push(newBook);
   render();
+  saveToLocalStorage();
 }
 
 function render() {
-  event.preventDefault();
   tbody.textContent = "";
   for (let i = 0; i < myLibrary.length; i += 1) {
     const div = document.createElement("tr");
@@ -62,7 +62,8 @@ function render() {
   form.reset();
 }
 
-function check() {
+function check(event) {
+  event.preventDefault();
   const bookName = document.getElementById("name");
   const bookAuthor = document.getElementById("author");
   const status = document.getElementById("read");
@@ -94,8 +95,22 @@ function listenClicks() {
     } else if (target.classList.contains("delBTN")) {
       myLibrary.splice(tr, 1);
       render();
+      saveToLocalStorage();
     }
   });
 }
 
+function saveToLocalStorage() {
+  localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
+}
+
+function loadFromLocalStorage() {
+  const library = localStorage.getItem("myLibrary");
+  if (library) {
+    myLibrary = JSON.parse(library);
+    render();
+  }
+}
+
+loadFromLocalStorage();
 listenClicks();
