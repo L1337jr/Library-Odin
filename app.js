@@ -88,9 +88,11 @@ function listenClicks() {
       if (myLibrary[tr].Status == "Read") {
         myLibrary[tr].Status = "Not Read";
         target.textContent = "Not Read";
+        saveToLocalStorage();
       } else {
         myLibrary[tr].Status = "Read";
         target.textContent = "Read";
+        saveToLocalStorage();
       }
     } else if (target.classList.contains("delBTN")) {
       myLibrary.splice(tr, 1);
