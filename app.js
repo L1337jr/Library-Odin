@@ -56,14 +56,6 @@ function render() {
     div.appendChild(status);
     status.appendChild(statusbtn);
 
-    const del = document.createElement("td");
-    const deltbtn = document.createElement("button");
-    deltbtn.setAttribute("id", "delBTN");
-    deltbtn.setAttribute("class", "delBTN");
-    deltbtn.textContent = "Delete";
-    div.appendChild(del);
-    del.appendChild(deltbtn);
-
     const edit = document.createElement("td");
     const editbtn = document.createElement("button");
     editbtn.setAttribute("id", "editBTN");
@@ -71,6 +63,14 @@ function render() {
     editbtn.textContent = "Edit";
     div.appendChild(edit);
     edit.appendChild(editbtn);
+
+    const del = document.createElement("td");
+    const deltbtn = document.createElement("button");
+    deltbtn.setAttribute("id", "delBTN");
+    deltbtn.setAttribute("class", "delBTN");
+    deltbtn.textContent = "Delete";
+    div.appendChild(del);
+    del.appendChild(deltbtn);
   }
   form.reset();
 }

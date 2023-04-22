@@ -4,6 +4,7 @@
   --blue: #1e40af;
   --backColor: #12192a;
   --redDelete: #9f1239;
+  --purpleEdit: #8f228f;
 }
 
 @media (max-width: 768px) {
@@ -198,6 +199,11 @@ tr {
 .delBTN:hover {
   border: 2px solid var(--redDelete);
   color: var(--redDelete);
+}
+
+.editBTN:hover {
+  border: 2px solid var(--purpleEdit);
+  color: var(--purpleEdit);
 }
 
 #number {
