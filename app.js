@@ -5,6 +5,11 @@ const form = document.querySelector("form");
 const tbody = document.getElementById("list");
 const $status = document.querySelector("#status");
 
+const bookName = document.getElementById("name");
+const bookAuthor = document.getElementById("author");
+const status = document.getElementById("read");
+const pagesN = document.getElementById("number");
+
 class Book {
   constructor(name, author, status, pages) {
     this.Name = name;
@@ -58,16 +63,20 @@ function render() {
     deltbtn.textContent = "Delete";
     div.appendChild(del);
     del.appendChild(deltbtn);
+
+    const edit = document.createElement("td");
+    const editbtn = document.createElement("button");
+    editbtn.setAttribute("id", "editBTN");
+    editbtn.setAttribute("class", "editBTN");
+    editbtn.textContent = "Edit";
+    div.appendChild(edit);
+    edit.appendChild(editbtn);
   }
   form.reset();
 }
 
 function check(event) {
   event.preventDefault();
-  const bookName = document.getElementById("name");
-  const bookAuthor = document.getElementById("author");
-  const status = document.getElementById("read");
-  const pagesN = document.getElementById("number");
   if (bookName.value !== "" && bookAuthor.value !== "" && pagesN.value > "0") {
     addBookToLibrary(
       bookName.value,
@@ -82,6 +91,7 @@ function listenClicks() {
   document.addEventListener("click", (event) => {
     const { target } = event;
     const tr = target.parentNode.parentNode.rowIndex - 1;
+
     if (target.id === "add") {
       check(event);
     } else if (target.classList.contains("statusBTN")) {
@@ -98,6 +108,17 @@ function listenClicks() {
       myLibrary.splice(tr, 1);
       render();
       saveToLocalStorage();
+    } else if (target.classList.contains("editBTN")) {
+      const tdName = target.parentNode.parentNode.cells[0].textContent;
+      const tdAuthor = target.parentNode.parentNode.cells[1].textContent;
+      const tdPages = target.parentNode.parentNode.cells[2].textContent;
+      const tdStatus = target.parentNode.parentNode.cells[3].textContent;
+
+      bookName.value = tdName;
+      bookAuthor.value = tdAuthor;
+      pagesN.value = tdPages;
+      status.value = tdStatus;
+      myLibrary.splice(tr, 1);
     }
   });
 }

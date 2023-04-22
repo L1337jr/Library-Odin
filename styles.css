@@ -40,10 +40,16 @@
   }
 
   .statusBTN,
-  .delBTN {
-    width: 70px !important;
+  .delBTN,
+  .editBTN {
+    width: 55px !important;
     letter-spacing: 0 !important;
     font-size: 9px !important;
+  }
+
+  td,
+  th {
+    max-width: 2rem !important;
   }
 }
 
@@ -126,7 +132,7 @@ table {
   border-collapse: collapse;
   letter-spacing: 1px;
   font-size: 0.8rem;
-  width: 63%;
+  width: 80%;
   font-size: large;
   margin-top: 2rem;
   word-wrap: break-word !important;
@@ -138,7 +144,6 @@ td {
   padding: 10px 5px;
   text-align: left;
   border-bottom: 1px solid white;
-  max-width: 2rem;
 }
 
 tr {
@@ -167,7 +172,8 @@ tr {
 }
 
 .statusBTN,
-.delBTN {
+.delBTN,
+.editBTN {
   height: 38px;
   width: 100px;
   color: white;
