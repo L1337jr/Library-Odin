@@ -145,6 +145,7 @@ td {
   padding: 10px 5px;
   text-align: left;
   border-bottom: 1px solid white;
+  max-width: 50rem;
 }
 
 tr {
